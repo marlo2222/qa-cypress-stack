@@ -1,0 +1,30 @@
+{
+    "viewportWidth": 1366,
+    "viewportHeight": 768,
+    "defaultCommandTimeout": 10000,
+    "requestTimeout": 15000,
+    "chromeWebSecurity": false,
+    "dev": {
+        "baseUrl": "{{app_base_url}}"
+    },
+    "video": false,
+    "retries": {
+        "runMode": 0,
+        "openMode": 0
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+    "toConsole": true,
+    "reporterEnabled": "cypress-mochawesome-reporter, mocha-junit-reporter",
+    "cypressMochawesomeReporterReporterOptions": {
+      "reportDir": "cypress/results",
+      "charts": true,
+      "reportPageTitle": "Report Cypress",
+      "embeddedScreenshots": false,
+      "inlineAssets": true
+    },
+    "mochaJunitReporterReporterOptions": {
+      "mochaFile": "cypress/results/junitreport-[hash].xml"
+    }
+  }
+}

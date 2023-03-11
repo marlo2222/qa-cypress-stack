@@ -1,0 +1,47 @@
+name: cypress-template
+description: Template base para automação com cypress
+types:
+  - app-template
+inputs:
+  - label: Nome do projeto
+    type: text
+    name: project_name
+    default: automacao-cypress
+    global: true
+
+  - name: app_version
+    label: Informe a versão do projeto
+    type: text
+    default: 1.0.0
+    global: true
+
+  - name: app_description
+    label: Informe a descrição do projeto
+    type: text
+    default: projeto de automação com cypress
+    required: true
+  
+  - name: app_author
+    label: Informe o autor do projeto
+    type: text
+    default: time de QA
+
+  - name: app_license
+    label: Informe a licença para esse projeto
+    type: text
+    default: ISC
+
+  - name: app_base_url
+    label: Informe a URL base a ser utilizada pelos testes
+    type: text
+    default: http://localhost:4200
+
+global-computed-inputs:
+  app_name: "{{project_name|replace(' ','_')|replace('/','-')|replace('\\\\', '-')}}"
+
+hooks: 
+  - type: run
+    trigger: after-render
+    commands:
+      - echo instalando dependencias do projeto && npm install
+

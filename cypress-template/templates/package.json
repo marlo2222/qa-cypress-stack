@@ -1,0 +1,27 @@
+{
+  "name": "{{app_name}}",
+  "version": "{{app_version}}",
+  "description": "{{app_description}}",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rmdir /S /Q cypress\\results && mkdir cypress\\results",
+    "merge:junit:report": "jrm ./cypress/results/junitreport.xml \"./cypress/results/junit.xml\"",
+    "combine:reports": "mochawesome-merge cypress/results/.jsons/.json > cypress/results/.jsons/report.json",
+    "cy:open:dev": "cypress open --env environment=\"dev\"",
+    "cy:run:dev": "cypress run --env environment=\"dev\"",
+    "cy:test": "cypress run"
+  },
+  "author": "{{app_author}}",
+  "license": "{{app_license}}",
+  "dependencies": {
+    "cypress": "^9.0.0",
+    "cypress-mochawesome-reporter": "2.3.0",
+    "cypress-multi-reporters": "1.5.0",
+    "junit-report-merger": "3.0.5",
+    "mocha": "9.1.2",
+    "mocha-junit-reporter": "2.0.2",
+    "mochawesome": "6.3.1",
+    "mochawesome-merge": "4.2.0",
+    "mochawesome-report-generator": "5.2.0"
+  }
+}
