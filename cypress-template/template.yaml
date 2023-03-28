@@ -42,6 +42,20 @@ global-computed-inputs:
 hooks: 
   - type: run
     trigger: after-render
-    commands:
-      - echo instalando dependencias do projeto && npm install
+    windows:
+      - cmd /C echo Instalando dependencias do projeto 
+      - cmd /C npm install
+      - cmd /C echo verificando cypress...
+      - cmd /C npx cypress verify
+    linux:
+      - echo Instalando dependencias do projeto 
+      - npm install
+      - echo verificando cypress...
+      - npx cypress verify
+    mac:
+      - echo Instalando dependencias do projeto 
+      - npm install
+      - echo verificando cypress...
+      - npx cypress verify
+
 

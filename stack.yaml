@@ -1,15 +1,14 @@
 description: stack para a criação de projetos de automação com cypress
 name: qa-cypress-stack
 display-name: qa-cypress-stack
-picture: stack.png
-category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
-compatibility: # Put a list of technologies compatible with the stack
-  - javascript
-  - cypress
-technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies 
-  - docker 
+picture: "cypress.jpg"
+category: Frontend
+compatibility: 
+  - Javascript
+technologies: 
+  - Cypress
 about: docs/about.md
 use-cases:
-  - title: Use Case Title
+  - title: Usando templates
     content: docs/use-case.md
     stackfile: stackfiles/default.yaml
