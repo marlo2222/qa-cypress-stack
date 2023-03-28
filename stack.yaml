@@ -6,7 +6,7 @@ category: Frontend
 compatibility: 
   - Javascript
 technologies: 
-  - Cypress
+  - Javascript
 about: docs/about.md
 use-cases:
   - title: Usando templates
