@@ -1,6 +1,6 @@
 # Use case
 
-Os passos a seguir demostram o processo de criaçãi de um projeto de automaçãi com utilizando a stack cypress.
+Os passos a seguir demostram o processo de criação de um projeto de automação com utilizando a stack cypress.
 
 Para criar um novo projeto de auromação utilizando a stack, siga os seguintes passos: 
 
